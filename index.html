@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <button class="close-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.17007 3.17007C3.39682 2.94331 3.76447 2.94331 3.99122 3.17007L9 8.17884L14.0088 3.17007C14.2355 2.94331 14.6032 2.94331 14.8299 3.17007C15.0567 3.39682 15.0567 3.76447 14.8299 3.99122L9.82116 9L14.8299 14.0088C15.0567 14.2355 15.0567 14.6032 14.8299 14.8299C14.6032 15.0567 14.2355 15.0567 14.0088 14.8299L9 9.82116L3.99122 14.8299C3.76447 15.0567 3.39682 15.0567 3.17007 14.8299C2.94331 14.6032 2.94331 14.2355 3.17007 14.0088L8.17884 9L3.17007 3.99122C2.94331 3.76447 2.94331 3.39682 3.17007 3.17007Z" fill="#46A358"/>
+            </svg>
+        </button>
+        <div class="auth-header">
+            <span class="login-text">Login</span>
+            <span class="divider">|</span>
+            <span class="register-text">Register</span>
+        </div>
+            <p class="auth-description">Enter your email and password to register.</p>
+            <form action="email" method="post">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <img src="./image/hide.jpeg" alt="Show password">
+                </div>
+            
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+            
+                <button type="submit" class="register-btn">Register</button>
+            
+                <div class="or-register">Or register with</div>
+            
+                <button class="google-btn">
+                    <img src="./image/google.jpeg" alt="Google Logo"> Continue with Google
+                </button>
+            
+                <button class="facebook-btn">
+                    <img src="./image/facebook.jpeg" alt="Facebook Logo"> Continue with Facebook
+                </button>
+            </form>
+            </div>    
+    </div>  
+
+</body>
+</html>
