@@ -1,124 +1,261 @@
-header{
-    padding: 30px 120px; 
+@font-face {
+    font-family: 'Cera Pro Regular';
+    src: url('./fonts/cerapro-regular.woff') format('woff'),
+    
 }
 
-.header{
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(70, 163, 88, 0.50);
+@font-face {
+    font-family: 'Cera Pro Bold';
+    src: url('./fonts/cerapro-bold.woff') format('woff'),
+    
 }
 
-.list{
+@font-face {
+    font-family: 'Hanging Letters';
+    src: url('./fonts/mr_hanginglettersg.woff') format('woff'),
+}
+
+
+body {
+    font-family: 'Cera Pro Regular', sans-serif;
     display: flex;
-    align-items: center;
     justify-content: center;
+    background-color: #FFF;
 }
 
-.list-item{
-    padding: 8px 25px 25px;
-    font-family: 'Poppins', sans-serif;
-    color: #3D3D3D;
-    font-size: 16px;
-}
-.list-item.active{
-    border-bottom: 3px solid #46A358;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-}
-
-.cta{
-    padding: 8px 18px;
+.header {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    color: #fff;
-    border-radius: 6px;
-    background-color: #46A358;
-    font-family: 'Poppins', sans-serif;
-    
-}
-
-.main-section{
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding-left: 120px;
-    padding-right: 120px;
-    
-}
-.container{
-    width: 100%;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(98deg, rgba(245, 245, 245, 0.50) -23.46%, rgba(245, 245, 245, 0.50) 107.51%);
+    background-color: white;
+    margin-bottom: 37px;
+    font-family: 'Cera Pro Regular', sans-serif; 
 }
 
-.main-text{
-    padding: 43px;
+.categories-nav {
+    display: flex;
+    gap: 37px;
+    font-size: 15px;
+    font-family: 'Cera Pro Regular';
 }
 
-.subtitle{
-    color: #3D3D3D;
-    margin-bottom: 7px;
-    margin-top: 68px;
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
-    color: #3D3D3D;
-    letter-spacing: 1.4px;
-
-}
-
-.main-title {
-    color: #3D3D3D; 
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    font-size: 70px;
-    margin-bottom: 5px;
-    margin-top: 0;
-}
-
-.green-text {
-    color: #46A358; 
-}
-
-.description {
-    color: #727272;
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
-    line-height: 24px;
+.categories-nav span {
     
+    color: #3D3D3D;
+    font-size: 15px;
+    font-family: 'Cera Pro Regular', sans-serif;
+    line-height: 16px;
 }
 
-.shop-btn {
-    background-color: #2d7f4e;
-    color: #fff;
-    border: none;
-    padding: 11px 27px 9px 26px;
-    cursor: pointer;
-    border-radius: 6px;
-    margin-top: 44px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.main-image {
+.categories-nav .active {
+    font-weight: bold;
+    color: #46A358;
     position: relative;
 }
 
-.big-plant{
-    width: 507px; 
-    position: relative;
-    z-index: 2;
-    display: block;
-}
-
-.small-plant{
-    width: 135px; 
+.categories-nav .active::after {
+    content: "";
+    width: 65px;
+    height: 2px;
+    background: #46A358;
     position: absolute;
-    bottom: 17px;
-    left: 55px;
-    z-index: 3;
-    display: block;
+    left: 0;
+    bottom: -5px;
+}
+
+
+.sort {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #3D3D3D;
+    font-size: 15px;
+}
+
+.sort svg {
+    width: 12px;
+    height: 8px;
+    stroke: #3D3D3D;
+}
+
+
+.wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background: #fbfbfb;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-family: 'Cera Pro Bold';
+    font-size: 18px;
+    font-weight: bold;
+    color: #3d3d3d;
+    margin-bottom: 7px;
+    text-align: left;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+
+.sidebar ul {
+    flex-grow: 1; 
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #333;
+    margin-left: 30px;
+    line-height: 40px;
+}
+
+.sidebar ul li .active {
+    font-family: 'Cera Pro Bold';
+    color: #46a358;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.sale-banner {
+    background: linear-gradient(180deg, rgba(70, 163, 88, 0.10) 0%, rgba(70, 163, 88, 0.03) 100%);
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sale-banner h3 {
+    font-family: "Hanging Letters";
+    color: #46A358;
+    font-size: 65px;
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.sale-banner p {
+    
+    margin: 11px 0 6px;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.sale-banner img {
+    mix-blend-mode: multiply;
+}
+
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    gap: 41px; 
+    align-items: start;
+}
+.product {
+    background: #fff;
+    flex-direction: column;   
+}
+
+.product h3 {
+    font-size: 16px;
+    margin: 12px 0 6px;
+    text-align: left;
+    line-height: 16px;
+}
+
+.product p {
+    font-family: 'Cera Pro Bold';
+    color: #4CAF50;
+    font-size: 18px;
+    text-align: left;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fbfbfb;
+    height: 300px;
+}
+
+.image img {
+    mix-blend-mode: multiply;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 90px;
+    border-radius: 4px;
+}
+
+
+.page-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Cera Pro Regular", sans-serif;
+    font-size: 18px;
+    line-height: 16px;
+    text-align: center;
+    width: 35px; 
+    height: 35px;
+    
+}
+
+
+.page-number.active {
+    background: #46A358;
+    color: #FFF;
+}
+
+
+.page-number:not(.active) {
+    border: 1px solid #E5E5E5;
+    background: #FFF;
+    color: #3D3D3D;
+}
+
+
+.next-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    background: #FFF;
+    cursor: pointer;
+}
+
+
+.next-page svg {
+    width: 8px;
+    height: 12px;
+    stroke: #3D3D3D;
 }
